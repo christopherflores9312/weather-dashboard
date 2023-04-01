@@ -1,9 +1,11 @@
+/* Set font, background color, and padding for the entire page */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #456fc3;
     padding: 2vw;
 }
 
+/* Set styles for the main header (h1) */
 h1 {
     text-align: center;
     margin-bottom: 2rem;
@@ -12,6 +14,7 @@ h1 {
     padding: 1rem;
 }
 
+/* Set styles for the search form container */
 #search-form {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -21,12 +24,14 @@ h1 {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Set styles for the search form label */
 #search-form label {
     display: block;
     margin-bottom: 0.7rem;
     color: #1d1d1d;
 }
 
+/* Set styles for the search form input field */
 #search-form input {
     width: 90%;
     padding: 0.8rem;
@@ -36,6 +41,7 @@ h1 {
     color: #1d1d1d;
 }
 
+/* Set styles for the search form button */
 #search-form button {
     display: block;
     width: 100%;
@@ -49,10 +55,12 @@ h1 {
     transition: all 0.3s ease;
 }
 
+/* Set hover effect for the search form button */
 #search-form button:hover {
     background-color: #0069d9;
 }
 
+/* Set styles for the search history container */
 #search-history {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -62,6 +70,7 @@ h1 {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Set styles for search history list items */
 #search-history li {
     list-style-type: none;
     padding: 0.8rem;
@@ -72,10 +81,12 @@ h1 {
     transition: all 0.3s ease;
 }
 
+/* Set hover effect for search history list items */
 #search-history li:hover {
     background-color: #f6f7f9;
 }
 
+/* Set styles for the current weather container */
 #current-weather {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -85,6 +96,7 @@ h1 {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Set styles for the weather forecast container */
 #forecast {
     display: flex;
     background-color: #ffffff;
@@ -95,6 +107,7 @@ h1 {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Set styles for the five-day forecast header (h2) */
 #fiveday h2 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -102,9 +115,9 @@ h1 {
     background-image: linear-gradient(to left, #456fc3, #fff);
     padding: 1rem;
     margin-left: 3.7rem;
-
 }
 
+/* Set styles for each forecast day's container */
 #forecast div {
     display: inline-block;
     width: 18%;
@@ -115,33 +128,40 @@ h1 {
     padding: 0.8rem;
     border-radius: 0.25rem;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-    color: white
+    color: white;
 }
 
+/* Remove right margin for the last forecast day's container */
 #forecast div:last-child {
     margin-right: 0;
 }
 
+/* Set styles for the main container with two columns */
 .container {
     display: flex;
     flex-wrap: wrap;
 }
 
+/* Set styles for the left column */
 .left-column {
     flex: 1;
     max-width: 300px;
     margin-right: 1.5rem;
 }
 
+/* Set styles for the right column */
 .right-column {
     flex: 2;
 }
 
+/* Set responsive styles for small screens */
 @media screen and (max-width: 767px) {
+    /* Change flex direction to column for small screens */
     .container {
         flex-direction: column;
     }
 
+    /* Adjust max width and remove right margin for left column on small screens */
     .left-column {
         max-width: 100%;
         margin-right: 0;
