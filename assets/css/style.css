@@ -62,23 +62,23 @@ body {
   
   #current-weather {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 600px;
-    margin: 20px auto;
+    padding: 1.25rem; 
+    border-radius: 0.3125rem;
+    max-width: 90%; 
+    margin: 1.25rem auto; 
   }
   
   #forecast {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 600px;
-    margin: 20px auto;
+    padding: 1.25rem; 
+    border-radius: 0.3125rem;
+    max-width: 90%; 
+    margin: 1.25rem auto;
   }
   
   #forecast h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   
   #forecast div {
@@ -86,11 +86,12 @@ body {
     width: 18%;
     text-align: center;
     margin-right: 2%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     background-color: #d9e1e9;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.625rem; 
+    border-radius: 0.3125rem;
   }
+  
   
   #forecast div:last-child {
     margin-right: 0;
