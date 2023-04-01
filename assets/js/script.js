@@ -98,7 +98,7 @@ function displayForecast(data) {
 
   const forecast = document.getElementById('forecast');
 
-  forecast.innerHTML = '<h2>5-Day Forecast</h2>';
+  fiveday.innerHTML = '<h2>5-Day Forecast</h2>';
 
   
 
