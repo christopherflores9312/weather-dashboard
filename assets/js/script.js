@@ -23,13 +23,13 @@ function getWeather(city) {
   fetch(currentWeatherUrl)
     .then(response => response.json())
     .then(data => displayCurrentWeather(data))
-    .catch(error => console.error('Error fetching current weather data:', error));
+    .catch(error => alert('Failed to fetch current weather data. Please try again later.'));
 
 
   fetch(forecastUrl)
     .then(response => response.json())
     .then(data => displayForecast(data))
-    .catch(error => console.error('Error fetching forecast data:', error));
+    .catch(error => alert('Failed to fetch current weather data. Please try again later.'));
 }
 
 function displayCurrentWeather(data) {
@@ -49,6 +49,7 @@ function displayCurrentWeather(data) {
 
 function displayForecast(data) {
   const fiveday = document.getElementById('fiveday');
+  forecast.innerHTML = '';
   fiveday.innerHTML = '<h2>5-Day Forecast</h2>';
 
   data.list.forEach((item, index) => {
