@@ -1,129 +1,142 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f7f9;
     padding: 2vw;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     margin-bottom: 2rem;
-  }
-  
-  #search-form {
+    color: #1d1d1d;
+}
+
+#search-form {
     background-color: #ffffff;
-    padding: 1.2rem;
+    padding: 1.5rem;
     border-radius: 5px;
     max-width: 90%;
     margin: 0 auto;
-  }
-  
-  #search-form label {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#search-form label {
     display: block;
-    margin-bottom: 0.3125rem;
-  }
-  
-  #search-form input {
-    width: 100%;
-    padding: 0.625rem;
+    margin-bottom: 0.7rem;
+    color: #1d1d1d;
+}
+
+#search-form input {
+    width: 90%;
+    padding: 0.8rem;
     border: 1px solid #ced4da;
-    border-radius: 0.3125rem;
-  }
-  
-  #search-form button {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: #1d1d1d;
+}
+
+#search-form button {
     display: block;
     width: 100%;
-    padding: 0.625rem; 
+    padding: 0.8rem;
     background-color: #007bff;
     color: #ffffff;
     border: none;
-    border-radius: 0.3125rem;
-    margin-top: 0.625rem; 
+    border-radius: 0.25rem;
+    margin-top: 1rem;
     cursor: pointer;
-  }
-  
-  
-  #search-history {
+    transition: all 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: #0069d9;
+}
+
+#search-history {
     background-color: #ffffff;
-    padding: 1.25rem; 
-    border-radius: 0.3125rem; 
-    max-width: 90%; 
-    margin: 1.25rem auto 0; 
-  }
-  
-  #search-history li {
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    max-width: 90%;
+    margin: 2rem auto 0;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#search-history li {
     list-style-type: none;
-    padding: 0.5rem; 
+    padding: 0.8rem;
     border: 1px solid #ced4da;
-    border-radius: 0.3125rem; 
-    margin-bottom: 0.625rem; 
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
     cursor: pointer;
-  }
-  
-  
-  #current-weather {
+    transition: all 0.3s ease;
+}
+
+#search-history li:hover {
+    background-color: #f6f7f9;
+}
+
+#current-weather {
     background-color: #ffffff;
-    padding: 1.25rem; 
-    border-radius: 0.3125rem;
-    max-width: 90%; 
-    margin: 1.25rem auto; 
-  }
-  
-  #forecast {
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#forecast {
     display: flex;
     background-color: #ffffff;
-    padding: 1.25rem; 
-    border-radius: 0.3125rem;
-    max-width: 90%; 
-    margin: 1.25rem auto;
-  }
-  
-  #fiveday h2 {
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#fiveday h2 {
     text-align: center;
-    margin-bottom: 1.25rem;
-  }
-  
-  #forecast div {
+    margin-bottom: 1.5rem;
+    color: #1d1d1d;
+}
+
+#forecast div {
     display: inline-block;
     width: 18%;
     text-align: center;
     margin-right: 2%;
-    margin-bottom: 1.25rem;
-    background-color: #d9e1e9;
-    padding: 0.625rem; 
-    border-radius: 0.3125rem;
-  }
-  
-  
-  #forecast div:last-child {
+    margin-bottom: 1.5rem;
+    background-color: #f6f7f9;
+    padding: 0.8rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#forecast div:last-child {
     margin-right: 0;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     flex-wrap: wrap;
-  }
+}
 
 .left-column {
     flex: 1;
     max-width: 300px;
-    margin-right: 1.25rem; 
-  }
-  
-  .right-column {
-    flex: 2; 
-  }
-  
-  #forecast div:last-child {
-    margin-right: 0;
-  }
-  
-  @media screen and (max-width: 767px) {
+    margin-right: 1.5rem;
+}
+
+.right-column {
+    flex: 2;
+}
+
+@media screen and (max-width: 767px) {
     .container {
-      flex-direction: column;
+        flex-direction: column;
     }
-    
+
     .left-column {
-      max-width: 100%;
-      margin-right: 0;
+        max-width: 100%;
+        margin-right: 0;
     }
-  }
+}
