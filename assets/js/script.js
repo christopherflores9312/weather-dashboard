@@ -48,7 +48,7 @@ function displayCurrentWeather(data) {
 }
 
 function displayForecast(data) {
-  const forecast = document.getElementById('forecast');
+  const fiveday = document.getElementById('fiveday');
   fiveday.innerHTML = '<h2>5-Day Forecast</h2>';
 
   data.list.forEach((item, index) => {
