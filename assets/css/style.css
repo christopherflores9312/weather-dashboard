@@ -69,6 +69,7 @@ body {
   }
   
   #forecast {
+    display: flex;
     background-color: #ffffff;
     padding: 1.25rem; 
     border-radius: 0.3125rem;
@@ -97,3 +98,32 @@ body {
     margin-right: 0;
   }
   
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.left-column {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 1.25rem; 
+  }
+  
+  .right-column {
+    flex: 2; 
+  }
+  
+  #forecast div:last-child {
+    margin-right: 0;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .left-column {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }

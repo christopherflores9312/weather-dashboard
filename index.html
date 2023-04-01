@@ -8,14 +8,20 @@
 </head>
 <body>
     <h1>Weather Dashboard</h1>
-    <form id="search-form">
-        <label for="city">City:</label>
-        <input type="text" id="city" required>
-        <button type="submit">Search</button>
-    </form>
-    <div id="search-history"></div>
-    <div id="current-weather"></div>
-    <div id="forecast"></div>
+    <div class="container"> <!-- Flex container -->
+        <div class="left-column"> <!-- First column: Search form and Search history -->
+            <form id="search-form">
+                <label for="city">City:</label>
+                <input type="text" id="city" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="search-history"></div>
+        </div>
+        <div class="right-column"> <!-- Second column: Current weather and 5-day forecast -->
+            <div id="current-weather"></div>
+            <div id="forecast"></div>
+        </div>
+    </div>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
