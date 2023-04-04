@@ -1,6 +1,9 @@
 // Add submit event listener to the search form and handle the search
 document.getElementById('search-form').addEventListener('submit', handleSearch);
 
+// Load search history from localStorage when the page loads
+loadSearchHistory();
+
 // Handle the search event, fetch weather data, and update search history
 function handleSearch(e) {
   e.preventDefault(); // Prevent default form submission behavior
@@ -10,13 +13,36 @@ function handleSearch(e) {
   document.getElementById('search-form').reset(); // Reset the search form
 }
 
-// Add a city to the search history list
+// Add a city to the search history list and save to localStorage
 function addToSearchHistory(city) {
-  const searchHistory = document.getElementById('search-history'); // Get the search history element
-  const listItem = document.createElement('li'); // Create a new list item
-  listItem.textContent = city; // Set the text content to the city name
-  listItem.addEventListener('click', () => getWeather(city)); // Add click event listener to fetch weather on click
-  searchHistory.appendChild(listItem); // Append the new list item to the search history
+  // Load search history from localStorage or initialize as an empty array
+  const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+  // Add city to search history if it's not already in the list
+  if (!searchHistory.includes(city)) {
+    searchHistory.push(city);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory)); // Save updated search history to localStorage
+
+    const historyList = document.getElementById('search-history'); // Get the search history element
+    const listItem = document.createElement('li'); // Create a new list item
+    listItem.textContent = city; // Set the text content to the city name
+    listItem.addEventListener('click', () => getWeather(city)); // Add click event listener to fetch weather on click
+    historyList.appendChild(listItem); // Append the new list item to the search history
+  }
+}
+
+// Load and display search history from localStorage
+function loadSearchHistory() {
+  const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+  const historyList = document.getElementById('search-history'); // Get the search history element
+
+  // Display each city in the search history
+  searchHistory.forEach(city => {
+    const listItem = document.createElement('li'); // Create a new list item
+    listItem.textContent = city; // Set the text content to the city name
+    listItem.addEventListener('click', () => getWeather(city)); // Add click event listener to fetch weather on click
+    historyList.appendChild(listItem); // Append the new list item to the search history
+  });
 }
 
 // Fetch and display current weather and forecast data for a given city
